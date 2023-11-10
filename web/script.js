@@ -24,8 +24,11 @@ $(function(e){
     });
     $('#bigmap_1').click(function(e) {
         $.post(`https://${GetParentResourceName()}/PauseMenu`,
-        JSON.stringify('mappa')
-    );
+            JSON.stringify('mappa')
+        );
+    });
+    $('#rules').click(function(e) {
+        window.invokeNative('openUrl', 'https://discord.gg/QtxKfq3ddx')
     });
 })
 
