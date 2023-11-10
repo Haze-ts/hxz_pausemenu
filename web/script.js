@@ -8,6 +8,7 @@ window.addEventListener('message', (event) => {
         $('#date').text(data.date)
     }else if(data.action == 'close'){
         $('#content-container').fadeOut()
+        $('#content-container-rules').fadeOut()
     }
 })
 
@@ -28,7 +29,14 @@ $(function(e){
         );
     });
     $('#rules').click(function(e) {
-        window.invokeNative('openUrl', 'https://discord.gg/QtxKfq3ddx')
+        $('#content-container').fadeOut()
+        setTimeout(() => {
+            $('#content-container-rules').fadeIn()
+        }, 500);
+    });
+
+    $('#x').click(function(e) {
+        $.post(`https://${GetParentResourceName()}/Close`);
     });
 })
 

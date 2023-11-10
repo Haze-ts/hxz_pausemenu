@@ -4,10 +4,14 @@
 		<title>HXZ-PAUSEMENU</title>
 		<link rel="StyleSheet" href="style.css" />
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/976789b613.js" crossorigin="anonymous"></script>
 		<script src="script.js"></script>
 	</head>
 	<body>
 		<div id="content-container" style="display: none;">
+			<div class="container-x">
+				<i class="fas fa-times" id="x"></i>
+			</div>
 			<div class="container-image-left">
 				<img src="skins/left-image.png"  nameid="left"  id="left-image" />
 			</div>
@@ -48,6 +52,25 @@
 					RULES
 				</div>
 				<img src="skins/rules.png"  nameid="Rules"  id="rules" />
+			</div>
+		</div>
+		<div id="content-container-rules" style="display: none;">
+			<div class="container-image-right">
+				<img src="skins/right-image.png"  nameid="right"  id="right-image" />
+			</div>
+			<div id="container-rules">
+				<div id="title">
+					<h1>RULES</h1>
+				</div>
+				<div id="rules-list">
+				<span>VDM: </span>Vehicle Deathmatch - Running over a player with a vehicle
+				<span>RDM: </span>Random Deathmatch - Killing a player without a valid RP reason
+				<span>FAILP: </span>Fail Roleplay - When an action or dialogue doesn't adhere to RP rules
+				<span>POWERGAME: </span>Performing actions that are impossible in reality
+				<span>METAGAME OOC: </span>Using out-of-character (OOC) information to your advantage in-character (IC), considered a rule violation
+				<span>METAGAME IC: </span>Similar to OOC Metagaming, but using in-character (IC) information without proper RP context
+				<span>BUNNY HOP: </span>Repeatedly and unrealistically jumping without reason or to facilitate an action.
+				</div>
 			</div>
 		</div>
 	</body>

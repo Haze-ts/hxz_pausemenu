@@ -7,10 +7,90 @@ img { position: absolute; display: block; margin: 0px; border: none; padding: 0p
 
 div { position: absolute; }
 
-#content-container { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+#content-container { display: block; position: relative; width: 100%; height: 100vh; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+/* #content-container-rules { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  } */
+
+#content-container-rules{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+	height: 100vh;
+	transition: transform 0.3s;
+}
+
+#container-rules{
+	width: 80vh;
+	height: 60vh;
+	background: rgba(0, 0, 0, 0.692);
+	border-radius: 5px;
+}
+
+.container-x{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3%;
+	height: 5%;
+	/* background-color: red; */
+	margin-left: 93%;
+	margin-top: 8%;
+}
+
+.fa-times{
+	float: right;
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+	margin-top: 9%;
+	z-index: 1;
+}
+
+.fa-times:hover{
+	color: rgb(255, 0, 0);
+	transform: scale(1.1);
+}
+
+.container-image-right{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 66.5%;
+	bottom: auto;
+}
+
+#title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Teko', sans-serif;
+	width: 100%;
+	height: 10%;
+	border-radius: 5px;
+	font-size: 2vh;
+	color: white;
+}
+
+#rules-list span{
+	color: rgb(161, 34, 34);
+}
+
+#rules-list {
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+	margin-left: 3%;
+	margin-top: 6%;
+	font-family: 'Teko', sans-serif;
+	width: 90%;
+	height: 85%;
+	border-radius: 5px;
+	font-size: 2.2vh;
+	color: white;
+}
 
 
-*{
+*{ 	
 	user-select: none;
 	transition: transform 0.3s;
 }
