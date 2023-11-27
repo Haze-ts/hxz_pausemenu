@@ -1,77 +1,109 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>HXZ-PAUSEMENU</title>
-		<link rel="StyleSheet" href="style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-		<script src="https://kit.fontawesome.com/976789b613.js" crossorigin="anonymous"></script>
-		<script src="script.js"></script>
-	</head>
-	<body>
-		<div id="content-container" style="display: none;">
-			<div class="container-x">
-				<i class="fas fa-times" id="x"></i>
-			</div>
-			<div class="container-image-left">
-				<img src="skins/left-image.png"  nameid="left"  id="left-image" />
-			</div>
-			<div class="container-info">
-				<div  nameid="info"  id="infoname" >
-					Haze Haze
-				</div>
-				<div  nameid="id"  id="id" >
-					ID: 249
-				</div>
-				<div  nameid="date"  id="date" >
-					GG/MM/YYYY
-				</div>
-			</div>
-			<div  nameid="container-setting"  id="container_setting"  >
-				<img src="skins/impostazionivere_1.png"  nameid="impostazioniVere 1"  id="impostazioni" />
-				<div  nameid="SETTINGS"  id="settings" >
-					SETTINGS
-				</div>
-			</div>
-			<div  nameid="container-pg"  id="container_pg"  >
-				<img src="skins/impostazioni_1.png"  nameid="impostazioni 1"  id="changepg" />
-				<div  nameid="CHANGE PG"  id="change_pg" >
-					CHANGE PG
-				</div>
-				
-			</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/976789b613.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="ever">
+            <div class="tuttocazzonculog" style="display: none;">
+                <div class="contenitore-sinistro" >
+                    <div class="cont-img">
+                        <img src="img/left-image.png" class="img-sinistracazzo">
+                    </div>
+                </div>
+                
+                <div class="contenitore-destro" >
+                    <div class="contenitore-interno">
+                        <div class="primo-contenitore-informazioni">
+                            <div class="parte-sinistra321321">
+                                <div class="contenitore-cosonome">
+                                    <span class="nomecristiano">MICHELE BELLISSIMO</span>
+                                </div>
+                                <div class="contenitore-coso-id">
+                                    <span class="coso-id-cristiano" id="id">ID CAZZONGUL</span>
+                                    <!-- <br> -->
+                                    <span class="coso-id-cristiano" id="date">28/08/2005</span>
+                                </div>
+                            </div>
+                            <div class="parte-destra43242354" id="x">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                        <div class="contenitori-left">
+                            <div class="contenitore-sezioni-sinistra">
+                                <div class="contenitore-bellissimocustoms" id="settings">
+                                   <img src="img/impostazioni.png" class="immagine-cazzo">
+                                   <span class="testo">SETTINGS</span>
+                                </div>
+    
+                                <div class="contenitore-bellissimocustoms" id="changepg">
+                                    <img src="img/changepg.png" class="immagine-cazzo">
+                                    <span class="testo">CHANGE PG</span>
+                                </div>
+        
+                                <div class="contenitore-bellissimocustoms" id="rules">
+                                    <img src="img/rules.png" class="immagine-cazzo">
+                                    <span class="testo">RULES</span>
+                                </div>
+                            </div>
+            
+                            <div class="contenitore-cazzi-destra">
+                                <div class="contenitore-mappacazzone" id="mappa">
+                                    <div class="contenitorecazzoneporcodiodsa23">
+                                        <span class="scrittamappacazzo">MAPS</span>
+                                        <img src="img/bigmap_1.png" class="immaginecazzomappa">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
 
-			<div  nameid="container-map"  id="container_map"  >
-				<img src="skins/bigmap_1.png"  nameid="bigMap 1"  id="bigmap_1" />
-				<div  nameid="MAP"  id="map" >
-					MAP
-				</div>
-			</div>
+            </div>
+        
 
-			<div  nameid="container-information"  id="container_information"  >
-				<div  nameid="rulesname"  id="rulesname" >
-					RULES
-				</div>
-				<img src="skins/rules.png"  nameid="Rules"  id="rules" />
-			</div>
-		</div>
-		<div id="content-container-rules" style="display: none;">
-			<div class="container-image-right">
-				<img src="skins/right-image.png"  nameid="right"  id="right-image" />
-			</div>
-			<div id="container-rules">
-				<div id="title">
-					<h1>RULES</h1>
-				</div>
-				<div id="rules-list">
-				<span>VDM: </span>Vehicle Deathmatch - Running over a player with a vehicle
-				<span>RDM: </span>Random Deathmatch - Killing a player without a valid RP reason
-				<span>FAILP: </span>Fail Roleplay - When an action or dialogue doesn't adhere to RP rules
-				<span>POWERGAME: </span>Performing actions that are impossible in reality
-				<span>METAGAME OOC: </span>Using out-of-character (OOC) information to your advantage in-character (IC), considered a rule violation
-				<span>METAGAME IC: </span>Similar to OOC Metagaming, but using in-character (IC) information without proper RP context
-				<span>BUNNY HOP: </span>Repeatedly and unrealistically jumping without reason or to facilitate an action.
-				</div>
-			</div>
-		</div>
-	</body>
+            <div class="parte-rules" style="display: none;">
+                <div class="parte-sinistra-n">
+
+                    <div class="contenitore-regole" >
+                        <div class="primacristodiparte-cazzo">
+                            <span class="scrttacasddsajhdashj">Server Rules</span>
+                        </div>
+    
+                        <div class="ultima-parte">
+                            <span style="color: red;">VDM: </span>Vehicle Deathmatch - Running over a player with a vehicle
+                            <br>
+                            <span style="color: red;">RDM: </span>Random Deathmatch - Killing a player without a valid RP reason
+                            <br>
+                            <span style="color: red;">FAILP: </span>Fail Roleplay - When an action or dialogue doesn't adhere to RP rules
+                            <br>
+                            <span style="color: red;">POWERGAME: </span>Performing actions that are impossible in reality
+                            <br>
+                            <span style="color: red;">METAGAME OOC: </span>Using out-of-character (OOC) information to your advantage in-character (IC), considered a rule violation
+                            <br>
+                            <span style="color: red;">METAGAME IC: </span>Similar to OOC Metagaming, but using in-character (IC) information without proper RP context
+                            <br>
+                            <span style="color: red;">BUNNY HOP: </span>Repeatedly and unrealistically jumping without reason or to facilitate an action.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parte-destra">
+                    <img src="img/right-image.png" class="hazehairottoilcazzo">
+                </div>
+                
+            </div>
+            
+           
+        </div>
+    </body>
 </html>

@@ -2,18 +2,18 @@ window.addEventListener('message', (event) => {
 	let data = event.data
 
 	if(data.action == 'open') {
-		$('#content-container').fadeIn()
-        $('#infoname').text(data.name.toUpperCase() + " " + data.surname.toUpperCase())
+		$('.tuttocazzonculog').fadeIn()
+        $('.nomecristiano').text(data.name.toUpperCase() + " " + data.surname.toUpperCase())
         $('#id').text('ID: ' + data.id)
         $('#date').text(data.date)
     }else if(data.action == 'close'){
-        $('#content-container').fadeOut()
-        $('#content-container-rules').fadeOut()
+        $('.tuttocazzonculog').fadeOut()
+        $('.parte-rules').fadeOut()
     }
 })
 
 $(function(e){
-    $('#impostazioni').click(function(e) {
+    $('#settings').click(function(e) {
         $.post(`https://${GetParentResourceName()}/PauseMenu`,
             JSON.stringify('impostazioni')
         );
@@ -23,15 +23,15 @@ $(function(e){
             JSON.stringify('cambiapg')
         );
     });
-    $('#bigmap_1').click(function(e) {
+    $('#mappa').click(function(e) {
         $.post(`https://${GetParentResourceName()}/PauseMenu`,
             JSON.stringify('mappa')
         );
     });
     $('#rules').click(function(e) {
-        $('#content-container').fadeOut()
+        $('.tuttocazzonculog').fadeOut()
         setTimeout(() => {
-            $('#content-container-rules').fadeIn()
+            $('.parte-rules').fadeIn()
         }, 500);
     });
 

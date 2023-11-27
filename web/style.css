@@ -1,54 +1,205 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
-body { margin: 0px; padding: 0px; overflow-x:hidden; }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
-img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+.ever {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-image: url(cazzongul.png);
+    background-size: 100% 100%;
+}
 
-div { position: absolute; }
+.contenitore-destro {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-#content-container { display: block; position: relative; width: 100%; height: 100vh; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+.contenitore-sinistro {
+    height: 100%;
+    width: 50%;
+    display: flex;
+align-items: end;
+}
 
-/* #content-container-rules { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  } */
+.cont-img {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    width: fit-content;
+}
+
+.img-sinistracazzo {
+    height: 90vh;
+    width: 75vw;
+}
+
+.contenitorecazzonterno {
+    width: 80%;
+    height: 80%;
+}
+
+.primo-contenitore-informazioni {
+    height: 10%;
+    width: 100%;
+    font-family: 'Teko', sans-serif;
+    display: flex;
+}
+
+.parte-destra43242354 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.fa-solid{
+    margin-right: 1vh;
+    cursor: pointer;
+    color: rgb(212, 212, 212);
+    font-size: 1vw;
+    transition: all 0.5s;
+    border: solid 0.2vh transparent;
+    padding: 0.3vh;
+    border-radius: 10vh;
+}
+
+.fa-solid:hover {
+    color: red;
+    transform: scale(1.5);
+    border: solid 0.2vh red;
+}
+
+.contenitore-cazzi-destra {
+    height: 100%;
+    width: 50%;
+}
+
+.contenitore-cosonome {
+    height: 3vh;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenitore-coso-id {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    text-align: start;
+    gap: 1vh;
+}
+
+.nomecristiano {
+    font-size: 2.5vh;
+    color: white;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+    text-align: end;
+}
+
+.coso-id-cristiano {
+    font-size: 1.7vh;
+    color: rgb(255, 251, 251);
+    text-align: start;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+}
+
+.contenitori-left {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+}
+
+.contenitore-sezioni-sinistra {
+    width: 50%;
+    height: 90%;
+    display: flex; 
+    flex-direction: column; 
+    gap: 4vh;
+    justify-content: center;
+}
+
+.contenitore-bellissimocustoms {
+    width: 17vw;
+	height: 19vh;
+	background: rgba(0, 0, 0, 0.692);
+	border-radius: 5px;
+    cursor: pointer;
+    color: rgb(109, 109, 109);
+    transition: all 0.5s;
+}
+
+.contenitore-bellissimocustoms:hover{
+	background: linear-gradient(to top, rgba(83, 143, 93, 0.678), rgba(0, 0, 0, 0.705));
+	transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 3px 0 rgba(6, 42, 12, 0.678);
+}
+
+.contenitore-mappacazzone {
+    height: 90%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.692);
+    border-radius: 0.5vh;
+    color: rgb(109, 109, 109);
+    cursor: pointer;
+}
+
+.contenitore-mappacazzone:hover{
+	background: linear-gradient(to top, rgba(7, 51, 14, 0.678), rgba(0, 0, 0, 0.705));
+	transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 3px 0 rgba(6, 42, 12, 0.678);
+}
+
+
+
+.contenitorecazzoporociodo {
+    height: 100%;
+    width: 30%;
+}
+
+.immagine-cazzo {
+    height: 19vh;
+    width: 17vw;
+}
+
+.tuttocazzonculog{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.testo {
+    font-family: 'Teko', sans-serif;
+	font-size: 2vw;
+	text-align: left;
+    position: relative;
+    left: 1vh;
+    top: -5vh;
+}
 
 #content-container-rules{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 60%;
-	height: 100vh;
+	width: 98%;
+	height: 101vh;
 	transition: transform 0.3s;
 }
 
-#container-rules{
-	width: 80vh;
-	height: 60vh;
-	background: rgba(0, 0, 0, 0.692);
-	border-radius: 5px;
-}
-
-.container-x{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 3%;
-	height: 5%;
-	/* background-color: red; */
-	margin-left: 93%;
-	margin-top: 8%;
-}
-
-.fa-times{
-	float: right;
-	color: rgb(255, 255, 255);
-	font-size: 40px;
-	margin-top: 9%;
-	z-index: 1;
-}
-
-.fa-times:hover{
-	color: rgb(255, 0, 0);
-	transform: scale(1.1);
+.parte-sinistra321321 {
+    height: 100%;
+    width: 50%;
 }
 
 .container-image-right{
@@ -58,6 +209,14 @@ div { position: absolute; }
 	margin-left: 66.5%;
 	bottom: auto;
 }
+
+#container-rules{
+	width: 90vh;
+	height: 70vh;
+	background: rgba(0, 0, 0, 0.692);
+	border-radius: 5px;
+}
+
 
 #title{
 	display: flex;
@@ -85,192 +244,136 @@ div { position: absolute; }
 	width: 90%;
 	height: 85%;
 	border-radius: 5px;
-	font-size: 2.2vh;
+	font-size: 1.2vw;
 	color: white;
 }
 
+
+.parte-rules {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.parte-sinistra-n {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parte-destra {
+    height: 100%;
+    width: 50%;
+display: flex;
+align-items: flex-end;
+justify-content: flex-end;
+}
+
+.contenitore-regole {
+    height: 65vh;
+    width: 40vw;
+    gap: 1vh;
+    box-shadow: 5px 5px 75px 11px #000000;
+    border-radius: 0.4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    justify-content: center;
+    background-color: rgba(27, 27, 27, 0.886);
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.primacristodiparte-cazzo {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@-webkit-keyframes scale-up-center {
+0% {
+    -webkit-transform: scale(0.0);
+            transform: scale(0.0);
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+}
+@keyframes scale-up-center {
+0% {
+    -webkit-transform: scale(0.0);
+            transform: scale(0.0);
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+}
+
+
+.scrttacasddsajhdashj{
+    font-size: 2.5vw;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 6px 5px 0 rgba(6, 42, 12, 0.678);
+}
+
+.ultima-parte {
+    height: 80%;
+    width: 90%;
+    color: white;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 1vw;
+    display: flex;
+    gap: 0.5vh;
+    align-items: center;
+    flex-direction: column ;
+}
+
+.contenitorecazzoneporcodiodsa23 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.immaginecazzomappa {
+    height: 100%;
+    width: 18vw;
+}
+
+.immaginecazzoneop {
+    height: 64vh;
+    width: 18vw;
+    margin-left: 4vh;
+}
 
 *{ 	
 	user-select: none;
 	transition: transform 0.3s;
 }
 
-#container_map {
-	top: 215px;
-	left: 1472px;
-	width: 361px;
-	height: 732px;
-	background: rgba(0, 0, 0, 0.692);
-	/* border: 2px solid rgb(83, 143, 93); */
-	border-radius: 5px;
+.scrittamappacazzo {
+    z-index: 999;
+    font-size: 3vw;
+    position: relative;
+    left: 6vh;
+    top: 28vh;
+    font-family: 'Teko', sans-serif;
 }
 
-#container_map:hover{
-	background: linear-gradient(to top, rgba(83, 143, 93, 0.678), rgba(0, 0, 0, 0.705));
-	transform: scale(1.1);
-}
-
-
-#bigmap_1 {
-	top: 0px;
-	left: 0px;
-	width: 360px;
-	height: 728px;
-}
-
-
-#map {
-	top: 92%;
-	left: 5%;
-	width: 404.4px;
-	height: 83.4px;
-	overflow: hidden;
-	font-family: 'Teko', sans-serif;
-	font-size: 44px;
-	text-align: left;
-	color:#ffffff;
-}
-
-
-#container_setting {
-	top: 215px;
-	left: 1045px;
-	width: 396px;
-	height: 232px;
-	background: rgba(0, 0, 0, 0.692);
-	/* border: 2px solid rgb(83, 143, 93); */
-	border-radius: 5px;
-	overflow: hidden;
-}
-
-#container_setting:hover{
-	background: linear-gradient(to top, rgba(83, 143, 93, 0.678), rgba(0, 0, 0, 0.705));
-	transform: scale(1.1);
-}
-
-#impostazioni {
-	top: 5.1px;
-	left: -10px;
-	width: 407px;
-	height: 226px;
-}
-
-#rules {
-	top: 5.1px;
-	left: -10px;
-	width: 407px;
-	height: 226px;
-}
-
-
-#settings {
-	top: 75%;
-	left: 5%;
-	width: 404.4px;
-	height: 83.4px;
-	overflow: hidden;
-	font-family: 'Teko', sans-serif;
-	font-size: 44px;
-	text-align: left;
-	color:#ffffff;
-}
-
-
-#rulesname {
-	top: 75%;
-	left: 5%;
-	width: 404.4px;
-	height: 83.4px;
-	overflow: hidden;
-	font-family: 'Teko', sans-serif;
-	font-size: 44px;
-	text-align: left;
-	color:#ffffff;
-	z-index: 1;
-}
-
-
-#container_information {
-	top: 715px;
-	left: 1045px;
-	width: 396px;
-	height: 232px;
-	background: rgba(0, 0, 0, 0.692);
-	/* border: 2px solid rgb(83, 143, 93); */
-	border-radius: 5px;
-}
-
-#container_information:hover{
-	background: linear-gradient(to top, rgba(83, 143, 93, 0.678), rgba(0, 0, 0, 0.705));
-	transform: scale(1.1);
-}
-
-
-#container_pg {
-	top: 465px;
-	left: 1045px;
-	width: 396px;
-	height: 232px;
-	background: rgba(0, 0, 0, 0.692);
-	/* border: 2px solid rgb(83, 143, 93); */
-	border-radius: 5px;
-}
-
-#container_pg:hover{
-	background: linear-gradient(to top, rgba(83, 143, 93, 0.678), rgba(0, 0, 0, 0.705));
-	transform: scale(1.1);
-}
-
-
-#change_pg {
-	top: 75%;
-	left: 5%;
-	width: 404.4px;
-	height: 83.4px;
-	overflow: hidden;
-	font-family: 'Teko', sans-serif;
-	font-size: 44px;
-	text-align: left;
-	color:#ffffff;
-}
-
-
-
-#changepg {
-	top: -2px;
-	left: -10%;
-	width: 399px;
-	height: 234px;
-}
-
-.container-info{
-	margin-top: 7.5%;
-	left: 54.5%;
-	width: 35%;
-	height: 70px;
-}
-
-#infoname{
-	position: relative;
-	font-family: 'Teko', sans-serif;
-	font-size: 30px;
-	color:#ffffff;
-}
-
-#id{
-	position: relative;
-	margin-top: -1.5%;
-	margin-left: 0.1%;
-	font-family: 'Teko', sans-serif;
-	font-size: 18px;
-	color:#ffffff;
-}
-
-#date{
-	position: absolute;
-	margin-top: -3.8%;
-	margin-left: 5%;
-	font-family: 'Teko', sans-serif;
-	font-size: 18px;
-	color:#ffffff;
+.hazehairottoilcazzo {
+height: 100vh;
+width: 90vw;
 }

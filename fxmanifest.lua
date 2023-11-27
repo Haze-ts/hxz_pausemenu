@@ -21,5 +21,5 @@ ui_page 'web/index.html'
 
 files{
 	'web/*.*',
-    'web/skins/*.*'
+    'web/img/*.*'
 }
