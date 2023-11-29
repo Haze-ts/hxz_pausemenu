@@ -19,6 +19,6 @@ elseif QBCore then
 elseif NDCore then
     local characters = NDCore.Functions.GetPlayerCharacters(source)
     for id, data in pairs(characters) do
-        print(data.firstName, data.lastName)
+        cb(data.firstName, data.lastName)
     end
 end
