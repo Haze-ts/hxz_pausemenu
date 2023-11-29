@@ -1,6 +1,6 @@
 local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
 local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:GetCoreObject() or nil
-local NDCore = exports["ND_Core"]:GetCoreObject()
+local NDCore = GetResourceState('ND_Core'):find('start') and exports["ND_Core"]:GetCoreObject() or nil
 
 if ESX then
     ESX.RegisterServerCallback('hxz_getInfo', function(source, cb)
