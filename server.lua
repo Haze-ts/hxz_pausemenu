@@ -1,5 +1,6 @@
 local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
 local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:GetCoreObject() or nil
+local NDCore = exports["ND_Core"]:GetCoreObject()
 
 if ESX then
     ESX.RegisterServerCallback('hxz_getInfo', function(source, cb)
@@ -15,4 +16,9 @@ elseif QBCore then
         local data = os.date("%d/%m/%y")
         cb(xPlayer.PlayerData.charinfo.firstname, xPlayer.PlayerData.charinfo.lastname, data)
     end)
+elseif NDCore then
+    local characters = NDCore.Functions.GetPlayerCharacters(source)
+    for id, data in pairs(characters) do
+        print(data.firstName, data.lastName)
+    end
 end

@@ -1,5 +1,6 @@
 local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
 local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:GetCoreObject() or nil
+local NDCore = exports["ND_Core"]:GetCoreObject()
 
 
 local PauseOpen = false
@@ -29,6 +30,18 @@ RegisterCommand('openpausemenu', function()
             end)
         elseif QBCore then
             QBCore.Functions.TriggerCallback('hxz_getInfo', function(name, surname, date)
+                TriggerScreenblurFadeIn(0)
+                SetNuiFocus(true, true)
+                SendNUIMessage({
+                    action = "open",
+                    name = name,
+                    surname = surname,
+                    date = date,
+                    id = GetPlayerServerId(PlayerId())
+                })
+            end)
+        elseif NDCore then
+            NDCore.callback('hxz_getInfo', function(name, surname, date)
                 TriggerScreenblurFadeIn(0)
                 SetNuiFocus(true, true)
                 SendNUIMessage({
