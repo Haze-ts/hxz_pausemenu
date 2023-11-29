@@ -4,10 +4,6 @@ game 'gta5'
 author 'Haze-ts'
 version '1.0'
 
-shared_scripts{
-    '@es_extended/imports.lua'
-}
-
 client_scripts{
     'client.lua'
 }

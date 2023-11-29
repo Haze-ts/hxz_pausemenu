@@ -1,9 +1,18 @@
-ESX.RegisterServerCallback('hxz_getInfo', function(source, cb)
-    local xPlayer = ESX.GetPlayerFromId(source)
-    local identifier = xPlayer.getIdentifier()
-    MySQL.Async.fetchAll('SELECT firstname, lastname, sex FROM users WHERE identifier = ?', {identifier},
-	function(result)
+local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
+local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:GetCoreObject() or nil
+
+if ESX then
+    ESX.RegisterServerCallback('hxz_getInfo', function(source, cb)
+        local xPlayer = ESX.GetPlayerFromId(source)
         local data = os.date("%d/%m/%y")
-        cb(result[1].firstname, result[1].lastname, result[1].sex, data)
-	end)
-end)
+        print(xPlayer.variables.firstName, xPlayer.variables.lastName, data)
+
+        cb(xPlayer.variables.firstName, xPlayer.variables.lastName, data)
+    end)
+elseif QBCore then
+    QBCore.Functions.CreateCallback('hxz_getInfo', function(source, cb)
+        local xPlayer = QBCore.Functions.GetPlayer(source)
+        local data = os.date("%d/%m/%y")
+        cb(xPlayer.PlayerData.charinfo.firstname, xPlayer.PlayerData.charinfo.lastname, data)
+    end)
+end

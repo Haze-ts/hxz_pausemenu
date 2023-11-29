@@ -1,3 +1,7 @@
+local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
+local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:GetCoreObject() or nil
+
+
 local PauseOpen = false
 function DisableControl()
     while PauseOpen do
@@ -11,18 +15,31 @@ RegisterCommand('openpausemenu', function()
     PauseOpen = true
     local invOpen = LocalPlayer.state.invOpen
     if not IsPauseMenuActive() and not invOpen then
-        ESX.TriggerServerCallback('hxz_getInfo', function(name, surname, sex, date)
-            TriggerScreenblurFadeIn(0)
-            SetNuiFocus(true, true)
-            SendNUIMessage({
-                action = "open",
-                name = name,
-                surname = surname,
-                sex = sex,
-                date = date,
-                id = GetPlayerServerId(PlayerId())
-            })
-        end)
+        if ESX then
+            ESX.TriggerServerCallback('hxz_getInfo', function(name, surname, date)
+                TriggerScreenblurFadeIn(0)
+                SetNuiFocus(true, true)
+                SendNUIMessage({
+                    action = "open",
+                    name = name,
+                    surname = surname,
+                    date = date,
+                    id = GetPlayerServerId(PlayerId())
+                })
+            end)
+        elseif QBCore then
+            QBCore.Functions.TriggerCallback('hxz_getInfo', function(name, surname, date)
+                TriggerScreenblurFadeIn(0)
+                SetNuiFocus(true, true)
+                SendNUIMessage({
+                    action = "open",
+                    name = name,
+                    surname = surname,
+                    date = date,
+                    id = GetPlayerServerId(PlayerId())
+                })
+            end)
+        end
     end
     DisableControl()
 end)
