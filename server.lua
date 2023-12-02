@@ -6,8 +6,6 @@ if ESX then
     ESX.RegisterServerCallback('hxz_getInfo', function(source, cb)
         local xPlayer = ESX.GetPlayerFromId(source)
         local data = os.date("%d/%m/%y")
-        print(xPlayer.variables.firstName, xPlayer.variables.lastName, data)
-
         cb(xPlayer.variables.firstName, xPlayer.variables.lastName, data)
     end)
 elseif QBCore then
@@ -17,8 +15,10 @@ elseif QBCore then
         cb(xPlayer.PlayerData.charinfo.firstname, xPlayer.PlayerData.charinfo.lastname, data)
     end)
 elseif NDCore then
-    local characters = NDCore.Functions.GetPlayerCharacters(source)
-    for id, data in pairs(characters) do
-        cb(data.firstName, data.lastName)
-    end
+    NDCore.callback.register("hxz_getInfo", function(source, cb)
+        local characters = NDCore.Functions.GetPlayerCharacters(source)
+        for id, data in pairs(characters) do
+            cb(data.firstName, data.lastName)
+        end
+    end)
 end

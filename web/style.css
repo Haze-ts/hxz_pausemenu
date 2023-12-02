@@ -152,6 +152,7 @@ align-items: end;
     border-radius: 0.5vh;
     color: rgb(109, 109, 109);
     cursor: pointer;
+    margin-left: -1vh;
 }
 
 .contenitore-mappacazzone:hover{
@@ -366,10 +367,10 @@ justify-content: flex-end;
 
 .scrittamappacazzo {
     z-index: 999;
-    font-size: 3vw;
+    font-size: 2vw;
     position: relative;
     left: 6vh;
-    top: 28vh;
+    top: 30vh;
     font-family: 'Teko', sans-serif;
 }
 
