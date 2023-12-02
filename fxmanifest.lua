@@ -2,7 +2,7 @@ fx_version 'adamant'
 game 'gta5'
 
 author 'Haze-ts'
-version '1.0'
+version '1.0.2'
 
 client_scripts{
     'client.lua'
