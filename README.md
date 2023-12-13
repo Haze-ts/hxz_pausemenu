@@ -9,7 +9,7 @@
 * Qb-Core (Coming Soon)
 
 **🧷 Discord**
-[Haze Studio](https://discord.gg/KeZSH27fGe)
+[Pixel Development](https://discord.gg/KeZSH27fGe)
 <br>
 **🎨 UI Design**
 [Manuz Studio](https://discord.gg/NmjkYjFKa6)
